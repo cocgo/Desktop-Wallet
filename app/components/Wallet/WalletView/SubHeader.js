@@ -14,18 +14,18 @@ export default class SubHeader extends Component {
         </div>
         <div className={styles.subContainer}>
           <div className={styles.subAmountContainer}>
-            <div className={styles.subAmountHeader}>Bandwidth</div>
+            {/* <div className={styles.subAmountHeader}>Bandwidth</div>
             <div className={styles.subAmount}>
               <FormattedNumber value={this.props.account.bandwidth} />{" "}
               <span>BW</span>
-            </div>
+            </div> */}
           </div>
           <div className={styles.subAmountContainer}>
-            <div className={styles.subAmountHeader}>TronPower</div>
+            {/* <div className={styles.subAmountHeader}>TronPower</div>
             <div className={styles.subAmount}>
               <FormattedNumber value={this.props.account.frozenBalance} />{" "}
               <span>TP</span>
-            </div>
+            </div> */}
             {this.props.account.frozenBalance > 0 ? (
               <div className={styles.tpExpire}>
                 Expires:{" "}

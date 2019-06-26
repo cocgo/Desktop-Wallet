@@ -158,7 +158,7 @@ class WalletView extends Component {
               <QRScanIcon />Receive
             </Button>
           </NavLink>
-          <NavLink to={freezeUrl}>
+          {/* <NavLink to={freezeUrl}>
             <Button className={buttonStyles.button}>
               <SnowIcon />Freeze TRX
             </Button>
@@ -171,7 +171,7 @@ class WalletView extends Component {
             </NavLink>
           ) : (
             ""
-          )}
+          )} */}
         </div>
         {/*<DatePicker/>*/}
         <TxList />

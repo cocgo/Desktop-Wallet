@@ -80,7 +80,7 @@ class WalletList extends Component {
       <div className={styles.container}>
         {this.renderTos()}
         <Header className={styles.header} text="MY WALLETS :">
-          <Dropdown icon={<MoreIcon/>}>
+          {/* <Dropdown icon={<MoreIcon/>}>
             <Dropdown.Menu>
               <NavLink to="/wallets/broadcast">
                 <Dropdown.Item
@@ -105,7 +105,7 @@ class WalletList extends Component {
                 />
               </NavLink>
             </Dropdown.Menu>
-          </Dropdown>
+          </Dropdown> */}
         </Header>
         <div className={styles.buttonContainer}>
           <NavLink to="/wallets/create">
