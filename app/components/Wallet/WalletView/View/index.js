@@ -4,7 +4,7 @@ import { FormattedDate, FormattedNumber, FormattedTime } from "react-intl";
 import { connect } from "react-redux";
 import styles from "./ViewTransaction.css";
 import DarkMainModal from "../../../Content/DarkMainModal";
-import { TopRightArrow, WalletIcon } from "../../../Icons";
+import { TopRightArrow, WalletIcon, RemarkIcon } from "../../../Icons";
 import { updateTransactions } from "../../../../actions/wallet";
 
 import { dropsToTrx, dropsToFiat } from "../../../../utils/currency";
@@ -150,6 +150,7 @@ class ViewTransaction extends Component {
     }
 
     this.state.tx = tx;
+    console.log('---tx:', tx);
     /*
     goToBlockchain = () =>
       require("electron").shell.openExternal("https://tronscan.org/#/transaction/");
@@ -197,6 +198,15 @@ class ViewTransaction extends Component {
               <FormattedDate value={tx.date} />{" "}
               <FormattedTime value={tx.date} />
             </div>
+
+            <div className={styles.divider} />
+            <div className={styles.tokenHeader}>Remark :</div>
+            <div className={styles.remarkContainer}>
+              <RemarkIcon className={styles.walletIcon} />
+              <div>{tx.remark}</div>
+            </div>
+            
+            
             {/*
               <div>
                 <button>

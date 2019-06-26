@@ -124,6 +124,14 @@
   font-weight: 300;
 }
 
+.remarkContainer {
+  margin-top: 10px;
+  color: #828282;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
 .divider {
   margin-top: 15px;
   border-bottom: 1px solid #e0e0e0;
