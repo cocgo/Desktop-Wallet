@@ -6,8 +6,8 @@ import styles from "./Navbar.css";
 
 const links = [
   { route: "/wallets", text: "Wallets", icon: Icons.WalletIcon },
-  { route: "/tokens", text: "Tokens", icon: Icons.TokensIcon },
-  { route: "/vote", text: "Vote", icon: Icons.VoteIcon },
+  // { route: "/tokens", text: "Tokens", icon: Icons.TokensIcon },
+  // { route: "/vote", text: "Vote", icon: Icons.VoteIcon },
   // { route: '/contact', text: 'Contact', icon: Icons.ContactIcon },
   { route: "/settings", text: "Settings", icon: Icons.SettingsIcon }
 ];
