@@ -21,6 +21,10 @@ class Wallet extends Component {
   }
 
   render() {
+    //console.log('this.props.tokens:', this.props.tokens);
+    if(!this.props.tokens){
+      this.props.tokens = {};
+    }
     let keys = Object.keys(this.props.tokens);
     return (
       <NavLink

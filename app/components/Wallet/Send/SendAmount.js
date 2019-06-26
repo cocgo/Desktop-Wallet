@@ -7,7 +7,7 @@ import styles from "./SendAmount.css";
 import Header from "../../Header";
 import AmountDisplay from "./AmountDisplay";
 import buttonStyles from "../../Button.css";
-import { ContactIcon, BackArrowIcon } from "../../Icons";
+import { ContactIcon, BackArrowIcon, RemarkIcon } from "../../Icons";
 import { PopupModal } from "../../Content/PopupModal";
 import BackButton from "../../Content/BackButton";
 import { trxToDrops, dropsToFiat } from "../../../utils/currency";
@@ -28,6 +28,7 @@ class SendAmount extends Component {
     this.state = {
       amount: 0,
       address: "",
+      remark: "",
 
       showConfirmModal: false,
       modalConfirmText: "",
@@ -87,6 +88,7 @@ class SendAmount extends Component {
           recipient: this.state.address.trim(),
           sender: this.state.senderAddress.trim(),
           amount: this.state.amount,
+          remark: this.state.remark,
           assetName: this.state.assetName
         },
         await client.getLastBlock()
@@ -104,7 +106,8 @@ class SendAmount extends Component {
         sendProperties: {
           privateKey: account.privateKey,
           recipient: this.state.address.trim(),
-          amount: this.state.amount
+          amount: this.state.amount,
+          remark: this.state.remark
         },
         accountAddress: account.publicKey,
         accountAddressPath: account.ledger ? account.ledgerPath : "",
@@ -128,6 +131,12 @@ class SendAmount extends Component {
     this.setState({
       ...this.state,
       address: event.target.value
+    });
+  }
+  onSetRemark(event) {
+    this.setState({
+      ...this.state,
+      remark: event.target.value
     });
   }
 
@@ -191,6 +200,7 @@ class SendAmount extends Component {
     this.updateTransferResponse(response);
   }
 
+  // 确认转账
   async modalConfirm() {
     if (this.state.accountAddressPath!==""){
       this.setState({
@@ -217,7 +227,8 @@ class SendAmount extends Component {
           .sendTrx(
             this.state.sendProperties.privateKey,
             this.state.sendProperties.recipient,
-            parseInt(trxToDrops(this.state.sendProperties.amount))
+            parseInt(trxToDrops(this.state.sendProperties.amount)),
+            this.state.sendProperties.remark
           )
           .catch(x => null);
       }
@@ -380,6 +391,19 @@ class SendAmount extends Component {
             token={this.props.isCold ? "" : token}
             onSetAmount={this.onSetAmount.bind(this)}
           />
+
+
+          <div className={styles.addressContainer}>
+            <RemarkIcon />
+            <input
+              onChange={this.onSetRemark.bind(this)}
+              placeholder="Remark"
+              className={styles.remark}
+              value={this.props.remark}
+            />
+          </div>
+
+
           <Button
             onClick={this.onClickSend.bind(this)}
             className={`${buttonStyles.button} ${buttonStyles.black}`}
