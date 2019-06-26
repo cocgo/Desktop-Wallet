@@ -3,7 +3,7 @@
 }
 
 .headerContainer {
-  background: linear-gradient(270deg, #ed3f21 0%, #dc2c73 100%);
+  background: linear-gradient(270deg, #12b298 0%, #067a73 100%);
   z-index: 2;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .votingFor span {
-  color: #ed3f21;
+  color: #12b298;
 }
 
 .dropdown {

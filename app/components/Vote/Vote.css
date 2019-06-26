@@ -67,8 +67,8 @@
 }
 
 .active {
-  border-top: 2px solid #ed3f21;
-  border-left: 2px solid #ed3f21;
-  border-bottom: 2px solid #dc2c73 !important;
-  border-right: 2px solid #dc2c73;
+  border-top: 2px solid #12b298;
+  border-left: 2px solid #12b298;
+  border-bottom: 2px solid #067a73 !important;
+  border-right: 2px solid #067a73;
 }

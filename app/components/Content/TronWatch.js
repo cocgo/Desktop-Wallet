@@ -11,7 +11,7 @@ export default class TronWatch extends Component {
       <div className={styles.container}>
         <div className={styles.subContainer}>
           <TronWatchIcon className={styles.logo} />
-          <div className={styles.subHeader}>The wallet built for Tron</div>
+          <div className={styles.subHeader}>The wallet built for DT</div>
         </div>
         <ContentSecondaryBG className={styles.bg} />
       </div>
