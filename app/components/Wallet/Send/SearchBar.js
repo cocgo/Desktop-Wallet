@@ -70,7 +70,7 @@ export default class SearchBar extends Component {
           })}
           results={this.state.results}
           value={this.state.value}
-          placeholder="Enter TRX Address to Send to"
+          placeholder="Enter DT Address to Send to"
           resultRenderer={this.resultRenderer}
         />
       </div>

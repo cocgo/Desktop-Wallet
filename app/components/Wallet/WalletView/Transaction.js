@@ -189,7 +189,7 @@ class Transaction extends Component {
                     (contract.trx_num / contract.num)
                 )}
               />{" "}
-              TRX
+              DT
             </div>
             <div className={`${styles.txAmount} ${styles.red}`}>
               - <FormattedNumber value={this.props.tx.amount_tokens} />{" "}
@@ -206,7 +206,7 @@ class Transaction extends Component {
               <FormattedNumber
                 value={dropsToTrx(this.props.tx.frozen_balance)}
               />{" "}
-              TRX
+              DT
             </div>
           </div>
         );
@@ -219,7 +219,7 @@ class Transaction extends Component {
               <FormattedNumber
                 value={dropsToTrx(this.props.tx.frozen_balance)}
               />{" "}
-              TRX
+              DT
             </div>
           </div>
         );
@@ -228,7 +228,7 @@ class Transaction extends Component {
         return (
           <div>
             <div className={`${styles.txAmount} ${styles.red}`}>
-              - <FormattedNumber value={1024} /> TRX
+              - <FormattedNumber value={1024} /> DT
             </div>
             <div className={`${styles.txAmount} ${styles.green}`}>
               + <FormattedNumber value={this.props.tx.total_supply} />{" "}
@@ -250,7 +250,7 @@ class Transaction extends Component {
         return (
           <div>
             <div className={`${styles.txAmount} ${styles.red}`}>
-              - <FormattedNumber value={9999} /> TRX
+              - <FormattedNumber value={9999} /> DT
             </div>
           </div>
         );

@@ -201,7 +201,7 @@ export const updateTransferTransactions = async (address, dispatch) => {
       amount: transaction.amount,
       date: transaction.timestamp,
       type: transaction.owner_address === address ? 1 : 0,
-      asset: transaction.asset_name ? transaction.asset_name : "TRX"
+      asset: transaction.asset_name ? transaction.asset_name : "DT"
     };
 
     cleanedTransactions.push(newTransaction);

@@ -44,7 +44,7 @@ class TxList extends Component {
   }
 
   getHighlightedTokenTransactions(transactions) {
-    if (this.props.match.params.token === "TRX") {
+    if (this.props.match.params.token === "DT") {
       return this.getTrxTransactions(transactions);
     } else {
       return this.getTokenTransactions(transactions);
@@ -97,7 +97,7 @@ class TxList extends Component {
             tx={tx}
             txID={tx._id}
             amount={tx.amount_tokens ? tx.amount_tokens : tx.amount}
-            isToken={tx.asset !== "TRX"}
+            isToken={tx.asset !== "DT"}
             date={tx.date}
             type={tx.type}
             asset={tx.asset}

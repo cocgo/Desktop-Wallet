@@ -109,7 +109,7 @@ class WalletView extends Component {
     let freezeUrl = "";
 
     if (account.watchonly && account.ledger!==true) {
-      if (this.props.match.params.token && token !== "TRX")
+      if (this.props.match.params.token && token !== "DT")
         sendUrl = "/wallets/createassettransfer/" + accountId + "/" + token;
       else sendUrl = "/wallets/createtransfer/" + accountId;
       freezeUrl = "/wallets/createfreeze/" + accountId;
@@ -160,7 +160,7 @@ class WalletView extends Component {
           </NavLink>
           {/* <NavLink to={freezeUrl}>
             <Button className={buttonStyles.button}>
-              <SnowIcon />Freeze TRX
+              <SnowIcon />Freeze DT
             </Button>
           </NavLink>
           {!account.watchonly ? (

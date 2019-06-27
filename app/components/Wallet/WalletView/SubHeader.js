@@ -10,7 +10,7 @@ export default class SubHeader extends Component {
       <div className={styles.main}>
         <div className={styles.mainAmount}>
           <FormattedNumber value={dropsToTrx(this.props.account.trx)} />{" "}
-          <span>TRX</span>
+          <span>DT</span>
         </div>
         <div className={styles.subContainer}>
           <div className={styles.subAmountContainer}>
@@ -41,7 +41,7 @@ export default class SubHeader extends Component {
           <div className={styles.container}>
             <SubHeaderToken
               amount={dropsToTrx(this.props.account.trx)}
-              token="TRX"
+              token="DT"
             />
             {Object.keys(this.props.account.tokens).map((coin, i) => {
               if (this.props.account.tokens[coin] > 0) {

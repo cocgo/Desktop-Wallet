@@ -9,7 +9,7 @@ import SearchBar from "./SearchBar";
 class Send extends Component {
   render() {
     let isToken = this.props.match.token ? true : false;
-    let assetName = isToken ? this.props.match.token : "TRX";
+    let assetName = isToken ? this.props.match.token : "DT";
 
     return (
       <Secondary className={styles.container}>

@@ -158,7 +158,7 @@ class SendAmount extends Component {
           await client.getLastBlock()
         );
       }else{
-        // Get Transaction hash for TRX
+        // Get Transaction hash for DT
         transaction = await tools.transactions.createUnsignedTransferTransaction(
           {
             sender: this.state.accountAddress,
@@ -367,7 +367,7 @@ class SendAmount extends Component {
   render() {
     let token = this.props.match.params.token
       ? this.props.match.params.token
-      : "TRX";
+      : "DT";
     this.state.tokenStr = token;
     return (
       <div className={styles.container}>

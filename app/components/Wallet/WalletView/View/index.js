@@ -85,19 +85,19 @@ class ViewTransaction extends Component {
     if (tx.contract_desc === "WitnessCreateContract") {
       return (
         <div className={styles.headerAmount}>
-          <FormattedNumber value={9999} /> TRX
+          <FormattedNumber value={9999} /> DT
         </div>
       );
     }
     if (tx.contract_desc === "AccountUpdateContract") {
       return (
         <div className={styles.headerAmount}>
-          <FormattedNumber value={0} /> TRX
+          <FormattedNumber value={0} /> DT
         </div>
       );
     }
     if (tx.amount) {
-      if (tx.asset === "TRX") {
+      if (tx.asset === "DT") {
         return (
           <div className={styles.headerAmount}>
             <FormattedNumber value={tx.amount / 1000000} />
@@ -114,7 +114,7 @@ class ViewTransaction extends Component {
     }
     return (
       <div className={styles.headerAmount}>
-        {tx.asset === "TRX" ? (
+        {tx.asset === "DT" ? (
           <FormattedNumber value={tx.amount / 1000000} />
         ) : (
           <FormattedNumber value={tx.amount} />
@@ -136,7 +136,7 @@ class ViewTransaction extends Component {
 
     let tx = transactions.find(tx => tx._id === txID);
     let usdValue = dropsToFiat(this.props.currency, tx.amount || 0);
-    if (tx.asset !== "TRX") {
+    if (tx.asset !== "DT") {
       let token = this.props.tokens.find(token => token.name === tx.asset);
       usdValue = dropsToFiat(this.props.currency, tx.amount * token.trx_num);
     }

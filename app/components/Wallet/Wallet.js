@@ -38,7 +38,7 @@ class Wallet extends Component {
           <li className={styles.name}>{this.props.name}</li>
           <li className={styles.address}>{this.props.index}</li>
           <li className={styles.token}>
-            <FormattedNumber value={dropsToTrx(this.props.trx)} /> TRX
+            <FormattedNumber value={dropsToTrx(this.props.trx)} /> DT
           </li>
           {keys.map((k, i) => {
             if (this.props.tokens[k] > 0) {
