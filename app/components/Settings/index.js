@@ -18,19 +18,18 @@ export default class SettingList extends Component {
     return (
       <div className={styles.container}>
         <Header text="MY SETTINGS :" />
-        <CategoryHeader text="General">
+        {/* <CategoryHeader text="General">
           <CategoryChild
             text="Share Tron Wallet"
             icon={<ShareIcon />}
             routeTo="/settings/share"
           />
-          {/*<CategoryChild text="Address Book" icon={<BookIcon />} routeTo="/settings/addressbook" />*/}
           <CategoryChild
             text="Feedback"
             icon={<PencilIcon />}
             routeTo="/settings/feedback"
           />
-        </CategoryHeader>
+        </CategoryHeader> */}
         <CategoryHeader text="Preferences">
           <CategoryChild
             text="Notifications"
@@ -43,11 +42,11 @@ export default class SettingList extends Component {
             icon={<WebGlobeIcon />}
             routeTo="/settings/language"
           />
-          <CategoryChild
+          {/* <CategoryChild
             text="Node"
             icon={<WifiIcon />}
             routeTo="/settings/node"
-          />
+          /> */}
         </CategoryHeader>
       </div>
     );
