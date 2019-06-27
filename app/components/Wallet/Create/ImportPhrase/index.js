@@ -72,7 +72,7 @@ class Import extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>TYPE BACKUP PHRASE TO IMPORT :</div>
-        <div className={styles.legacyWarning}>If you created your account before November 2018 and with an old TronWatch Desktop version, please use import legacy</div>
+        {/* <div className={styles.legacyWarning}>If you created your account before November 2018 and with an old TronWatch Desktop version, please use import legacy</div> */}
         <Form className={styles.form}>
           <div className={styles.wordContainer}>
             <div className={styles.wordColumn}>

@@ -28,14 +28,14 @@ const panes = [
       </Tab.Pane>
     )
   },
-  {
-    menuItem: "Import Legacy",
-    render: () => (
-      <Tab.Pane attached={false}>
-        <LegacyImportPhrase />
-      </Tab.Pane>
-    )
-  },
+  // {
+  //   menuItem: "Import Legacy",
+  //   render: () => (
+  //     <Tab.Pane attached={false}>
+  //       <LegacyImportPhrase />
+  //     </Tab.Pane>
+  //   )
+  // },
   {
     menuItem: "Import Key",
     render: () => (
@@ -44,14 +44,14 @@ const panes = [
       </Tab.Pane>
     )
   },
-  {
-    menuItem: "Ledger",
-    render: () => (
-      <Tab.Pane attached={false}>
-        <Ledger />
-      </Tab.Pane>
-    )
-  }
+  // {
+  //   menuItem: "Ledger",
+  //   render: () => (
+  //     <Tab.Pane attached={false}>
+  //       <Ledger />
+  //     </Tab.Pane>
+  //   )
+  // }
 ];
 
 export default class Creation extends Component {
