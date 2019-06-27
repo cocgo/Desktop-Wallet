@@ -11,7 +11,7 @@ export default class AmountDisplay extends Component {
         <div className={styles.amountInput}>
           <div className={styles.amountMain}>
             <AmountInput onSetAmount={this.props.onSetAmount} />
-            <span>TRX</span>
+            <span>DT</span>
           </div>
         </div>
       </div>

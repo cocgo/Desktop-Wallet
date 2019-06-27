@@ -98,7 +98,7 @@ class Transfer extends Component {
   }
 
   render() {
-    let token = "TRX";
+    let token = "DT";
     this.state.tokenStr = token;
     return (
       <div className={styles.container}>
