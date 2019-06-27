@@ -1,8 +1,8 @@
 {
-  "name": "TronWatch",
-  "productName": "TronWatch",
+  "name": "DTWallet",
+  "productName": "DT Wallet",
   "version": "1.0.0",
-  "description": "TronWatch",
+  "description": "DT Wallet",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --colors",
@@ -32,8 +32,8 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "TronWatch",
-    "appId": "org.tron.watch.desktop",
+    "productName": "DT Wallet",
+    "appId": "dtexplorer.io.desktop",
     "files": [
       "dist/",
       "node_modules/",
@@ -74,15 +74,15 @@
     }
   },
   "author": {
-    "name": "TronWatch",
-    "email": "mail@tron.watch",
-    "url": "https://tron.watch"
+    "name": "DTWallet",
+    "email": "mail@dtexplorer.io",
+    "url": "https://dtexplorer.io"
   },
   "keywords": [
-    "tron",
+    "dt",
     "wallet"
   ],
-  "homepage": "https://tron.watch",
+  "homepage": "https://dtexplorer.io",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",

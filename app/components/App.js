@@ -183,7 +183,7 @@ class App extends React.Component {
               <PopupModal
                 confirmation
                 modalVis={this.state.showResetModal}
-                modalText="Are you sure? This will reset TronWatch and delete all data."
+                modalText="Are you sure? This will reset DT wallet and delete all data."
                 modalConfirm={this.onUserAcceptsReset.bind(this)}
                 modalDecline={this.onUserDeclinesReset.bind(this)}
               />

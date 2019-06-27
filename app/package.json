@@ -1,13 +1,13 @@
 {
-  "name": "TronWatch",
-  "productName": "TronWatch",
-  "version": "1.0.12",
-  "description": "Manage your Tron finances in one App! Store and spend them with our secure, open source wallet.",
+  "name": "DTWallet",
+  "productName": "DT Wallet",
+  "version": "1.0.0",
+  "description": "Manage your DT finances in one App!",
   "main": "./main.prod.js",
   "author": {
-    "name": "TronWatch Inc.",
-    "email": "info@tron.watch",
-    "url": "https://tron.watch/"
+    "name": "DT Wallet Inc.",
+    "email": "info@dtexplorer.io",
+    "url": "https://dtexplorer.io/"
   },
   "scripts": {
     "electron-rebuild": "node -r babel-register ../internals/scripts/ElectronRebuild.js",
