@@ -170,7 +170,7 @@ class ViewTransaction extends Component {
               {this.renderHeaderLabel()} :
             </div>
             {this.renderHeaderAmount()}
-            <div className={styles.headerCurrency}>{usdValue} USD</div>
+            {/* <div className={styles.headerCurrency}>{usdValue} USD</div> */}
           </div>
           <div className={styles.tokenInfoContainer}>
             <div className={styles.tokenHeader}>Fee :</div>

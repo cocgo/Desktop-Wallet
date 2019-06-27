@@ -8,7 +8,7 @@ export default class AmountDisplay extends Component {
 
     return (
       <div className={styles.amountSub}>
-        {parseFloat(amount).toLocaleString()} USD
+        {/* {parseFloat(amount).toLocaleString()} USD */}
       </div>
     );
   }
