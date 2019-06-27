@@ -60,7 +60,7 @@
 }
 
 .gradient:hover {
-  background: linear-gradient(270deg, #e0472c 0%, #da3678 100%);
+  background: linear-gradient(270deg, #2ce0d1 0%, #36c1da 100%);
 }
 
 .gradient:active {
