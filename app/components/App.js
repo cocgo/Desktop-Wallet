@@ -56,12 +56,19 @@ class App extends React.Component {
     let theirs = onlineVersion.split(".");
 
     for (let i = 0; i < theirs.length && i < mine.length; i++) {
-      let m = parseInt(mine[i]);
-      let t = parseInt(theirs[i]);
-
-      if (t > m) return true;
+      let a = parseInt(mine[i]);
+      let b = parseInt(theirs[i]);
+      if (a == b) {
+        continue;
+      }else {
+        if(a > b){
+          return false;
+        }else{
+          return true;
+        }
+      }
     }
-    return theirs.length > mine.length;
+    return false;
   }
 
   async fetchAppVersion() {
