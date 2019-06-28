@@ -54,7 +54,7 @@ class WalletList extends Component {
     return (
       <div className={styles.tosContainer}>
         <div className={styles.tosHeader}>
-          The DT Desktop Wallet is currently in <span>1.0.0</span>.<br/><br/>
+          The DT Desktop Wallet<span></span>.<br/><br/>
           <div className={styles.tosSubText}>It is running on the DT Mainnet.<br/><br/>
           Always make sure you have backups of your private key and recovery phrases.</div>
         </div>
