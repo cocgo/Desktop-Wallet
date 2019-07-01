@@ -68,7 +68,7 @@ class WebsocketContainer extends Component {
 
   connectWebsocket() {
     console.log("connecting websocket");
-    this.state.websocket = new WebSocket("ws://192.168.0.17:8089");
+    this.state.websocket = new WebSocket("ws://dtexplorer.io/walletWs");
     this.state.websocket.onopen = this.websocketOnOpen.bind(this);
     this.state.websocket.onmessage = this.websocketOnMessage.bind(this);
   }
