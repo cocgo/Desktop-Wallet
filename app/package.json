@@ -1,6 +1,6 @@
 {
-  "name": "DTWallet",
-  "productName": "DT Wallet",
+  "name": "testDTWallet",
+  "productName": "test DT Wallet",
   "version": "1.0.0",
   "description": "Manage your DT finances in one App!",
   "main": "./main.prod.js",
