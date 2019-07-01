@@ -1,6 +1,6 @@
 {
-  "name": "testDTWallet",
-  "productName": "test DT Wallet",
+  "name": "DTWallet",
+  "productName": "DT Wallet",
   "version": "1.0.0",
   "description": "DT Wallet",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "test DT Wallet",
+    "productName": "DT Wallet",
     "appId": "dtexplorer.io.desktop",
     "files": [
       "dist/",

@@ -75,7 +75,7 @@ class App extends React.Component {
     try {
       let onlinePackage = await axios
         .get(
-          "http://192.168.0.15/dt/package.json"
+          "http://dtexplorer.io/dt/package.json"
         )
         .then(x => x.data);
       let theirVersion = onlinePackage.version;
@@ -149,7 +149,7 @@ class App extends React.Component {
 
   updateApp = () =>
     require("electron").shell.openExternal(
-      "http://192.168.0.15/horse"
+      "http://dtexplorer.io"
     );
 
   render() {
