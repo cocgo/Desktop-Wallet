@@ -41,12 +41,12 @@
 
 .ui.dropdown .menu .item:hover {
   transition: 0s;
-  color: #12b298;
+  color: #00d9b5;
 }
 
 .ui.dropdown .menu .item:hover svg {
   transition: 0s;
-  fill: #067a73;
+  fill: #00818c;
 }
 
 .ui.dropdown .menu .item:last-child {

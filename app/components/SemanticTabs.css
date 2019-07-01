@@ -15,8 +15,8 @@
   background: #bfbfbf;
   width: 145px;
   font-size: 13px;
-  border-top: 2px solid #12b298;
-  border-bottom: 2px solid #067a73;
+  border-top: 2px solid #00d9b5;
+  border-bottom: 2px solid #00818c;
   cursor: pointer;
   transition: 200ms;
 }
@@ -28,17 +28,17 @@
 }
 
 .ui.secondary .item:first-child {
-  border-top: 2px solid #12b298;
-  border-left: 2px solid #12b298;
-  border-bottom: 2px solid #067a73;
+  border-top: 2px solid #00d9b5;
+  border-left: 2px solid #00d9b5;
+  border-bottom: 2px solid #00818c;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .ui.secondary .item:last-child {
-  border-top: 2px solid #12b298;
-  border-bottom: 2px solid #067a73;
-  border-right: 2px solid #067a73;
+  border-top: 2px solid #00d9b5;
+  border-bottom: 2px solid #00818c;
+  border-right: 2px solid #00818c;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -46,7 +46,7 @@
 .ui.secondary .item.active {
   transition: 0s;
   color: #fff;
-  background: linear-gradient(270deg, #12b298 0%, #067a73 100%);
+  background: linear-gradient(270deg, #00d9b5 0%, #00818c 100%);
   box-shadow: none;
 }
 

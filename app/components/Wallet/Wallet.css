@@ -93,8 +93,8 @@
 
 .active {
   background-color: rgba(255, 255, 255, 0.1);
-  border-top: 2px solid #12b298;
-  border-left: 2px solid #12b298;
-  border-bottom: 2px solid #067a73 !important;
-  border-right: 2px solid #067a73;
+  border-top: 2px solid #00d9b5;
+  border-left: 2px solid #00d9b5;
+  border-bottom: 2px solid #00818c !important;
+  border-right: 2px solid #00818c;
 }
