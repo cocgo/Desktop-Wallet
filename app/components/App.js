@@ -75,7 +75,7 @@ class App extends React.Component {
     try {
       let onlinePackage = await axios
         .get(
-          "https://raw.githubusercontent.com/TronWatch/Desktop-Wallet/master/app/package.json"
+          "http://192.168.0.15/dt/package.json"
         )
         .then(x => x.data);
       let theirVersion = onlinePackage.version;
@@ -149,7 +149,7 @@ class App extends React.Component {
 
   updateApp = () =>
     require("electron").shell.openExternal(
-      "https://github.com/TronWatch/Desktop-Wallet/releases"
+      "http://192.168.0.15/horse"
     );
 
   render() {
