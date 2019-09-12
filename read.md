@@ -5,3 +5,7 @@ wallet ip change：
 2 detail:
 ws://dtexplorer.io/walletWs
 "api_url" : "http://dtexplorer.io/walletApi"
+
+3. yarn dev
+4. yarn package
+

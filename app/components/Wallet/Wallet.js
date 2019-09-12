@@ -21,11 +21,12 @@ class Wallet extends Component {
   }
 
   render() {
-    //console.log('this.props.tokens:', this.props.tokens);
-    if(!this.props.tokens){
-      this.props.tokens = {};
+    // console.log('this.props.tokens:',this.props, this.props.tokens);
+    let keys = [];
+    if(this.props.tokens){
+      // this.props.tokens = {};
+      keys = Object.keys(this.props.tokens)
     }
-    let keys = Object.keys(this.props.tokens);
     return (
       <NavLink
         onClick={this.onClick.bind({ _this: this, address: this.props.index })}

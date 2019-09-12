@@ -6,6 +6,10 @@ import { dropsToTrx } from "../../../utils/currency";
 
 export default class SubHeader extends Component {
   render() {
+    let keys = [];
+    if(this.props.account.tokens){
+      keys = Object.keys(this.props.account.tokens)
+    }
     return (
       <div className={styles.main}>
         <div className={styles.mainAmount}>
@@ -43,12 +47,12 @@ export default class SubHeader extends Component {
               amount={dropsToTrx(this.props.account.trx)}
               token="DT"
             />
-            {Object.keys(this.props.account.tokens).map((coin, i) => {
-              if (this.props.account.tokens[coin] > 0) {
+            {Object.keys(keys).map((coin, i) => {
+              if (keys[coin] > 0) {
                 return (
                   <SubHeaderToken
                     key={coin}
-                    amount={this.props.account.tokens[coin]}
+                    amount={keys[coin]}
                     token={coin}
                     isToken="true"
                   />
