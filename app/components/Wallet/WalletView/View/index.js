@@ -161,7 +161,7 @@ class ViewTransaction extends Component {
           <div className={styles.headerBG}>
             <TopRightArrow
               className={
-                tx.type === 0
+                tx.type === 1
                   ? styles.headerIcon
                   : `${styles.headerIcon} ${styles.rotate}`
               }
@@ -181,12 +181,12 @@ class ViewTransaction extends Component {
             </div>
             <div className={styles.divider} />
             <div className={styles.tokenHeader}>
-              {tx.type === 0 ? "Sent to" : "Received From"} :
+              {tx.type === 1 ? "Sent to" : "Received From"} :
             </div>
             <div className={styles.tokenHeaderText}>{tx.owner_address}</div>
             <div className={styles.divider} />
             <div className={styles.tokenHeader}>
-              {tx.type === 0 ? "Sent From" : "Received in"} :
+              {tx.type === 1 ? "Sent From" : "Received in"} :
             </div>
             <div className={styles.walletContainer}>
               <WalletIcon className={styles.walletIcon} />
