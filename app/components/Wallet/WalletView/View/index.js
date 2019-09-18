@@ -124,6 +124,27 @@ class ViewTransaction extends Component {
     );
   }
 
+  copyHeight() {
+    var wallet = document.querySelector("#height");
+    wallet.focus();
+    wallet.select();
+    document.execCommand("copy");
+  }
+  
+  copyAddress() {
+    var wallet = document.querySelector("#address");
+    wallet.focus();
+    wallet.select();
+    document.execCommand("copy");
+  }
+
+  copyRemark() {
+    var wallet = document.querySelector("#remark");
+    wallet.focus();
+    wallet.select();
+    document.execCommand("copy");
+  }
+
   render() {
     let accountId = this.props.match.params.account;
     let txID = this.props.match.params.txid;
@@ -178,6 +199,8 @@ class ViewTransaction extends Component {
               <div className={styles.feeAmount}>
                 {/* <FormattedNumber value={tx.txsize} /> Bandwidth */}
                 <input
+                  id = 'height'
+                  onClick={this.copyHeight}
                   className={styles.input}
                   value= {tx.block_id}
                   readOnly
@@ -189,6 +212,8 @@ class ViewTransaction extends Component {
               {tx.type === 1 ? "Sent to" : "Received From"} :
             </div>
             <input
+              id="address"
+              onClick={this.copyAddress}
               className={styles.input}
               value= {tx.type === 1 ? tx.to_address : tx.owner_address}
               readOnly
@@ -214,6 +239,8 @@ class ViewTransaction extends Component {
             <div className={styles.remarkContainer}>
               <RemarkIcon className={styles.walletIcon} />
               <input
+                id="remark"
+                onClick={this.copyRemark}
                 className={styles.input}
                 value={tx.remark}
                 readOnly
