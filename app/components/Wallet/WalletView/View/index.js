@@ -183,7 +183,12 @@ class ViewTransaction extends Component {
             <div className={styles.tokenHeader}>
               {tx.type === 1 ? "Sent to" : "Received From"} :
             </div>
-            <div className={styles.tokenHeaderText}>{tx.owner_address}</div>
+            <input
+              className={styles.input}
+              value= {tx.type === 1 ? tx.to_address : tx.owner_address}
+              readOnly
+            />
+            
             <div className={styles.divider} />
             <div className={styles.tokenHeader}>
               {tx.type === 1 ? "Sent From" : "Received in"} :
@@ -203,7 +208,11 @@ class ViewTransaction extends Component {
             <div className={styles.tokenHeader}>Remark :</div>
             <div className={styles.remarkContainer}>
               <RemarkIcon className={styles.walletIcon} />
-              <div>{tx.remark}</div>
+              <input
+                className={styles.input}
+                value={tx.remark}
+                readOnly
+              />
             </div>
             
             
