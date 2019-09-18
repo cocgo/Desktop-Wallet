@@ -173,10 +173,15 @@ class ViewTransaction extends Component {
             {/* <div className={styles.headerCurrency}>{usdValue} USD</div> */}
           </div>
           <div className={styles.tokenInfoContainer}>
-            <div className={styles.tokenHeader}>Fee :</div>
+            <div className={styles.tokenHeader}>In Height :</div>
             <div className={styles.feeContainer}>
               <div className={styles.feeAmount}>
-                <FormattedNumber value={tx.txsize} /> Bandwidth
+                {/* <FormattedNumber value={tx.txsize} /> Bandwidth */}
+                <input
+                  className={styles.input}
+                  value= {tx.block_id}
+                  readOnly
+                />
               </div>
             </div>
             <div className={styles.divider} />
