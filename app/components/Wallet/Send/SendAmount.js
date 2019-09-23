@@ -32,6 +32,7 @@ class SendAmount extends Component {
 
       showConfirmModal: false,
       modalConfirmText: "",
+      isConfirmClickable: true,
 
       target: "",
       tokenStr: "",
@@ -202,6 +203,12 @@ class SendAmount extends Component {
 
   // 确认转账
   async modalConfirm() {
+    if(this.state.isConfirmClickable == false){
+      console.log('repeat click.')
+      return;
+    }
+    this.state.isConfirmClickable = false;
+    
     if (this.state.accountAddressPath!==""){
       this.setState({
         ...this.state,
@@ -209,6 +216,7 @@ class SendAmount extends Component {
         showLedgerModal: true,
       });
       this.sendWithLedger();
+      this.state.isConfirmClickable = true;
     }
     else {
       let client = new TronHttpClient();
@@ -233,6 +241,7 @@ class SendAmount extends Component {
           .catch(x => null);
       }
       this.updateTransferResponse(response);
+      this.state.isConfirmClickable = true;
     }
   }
 
