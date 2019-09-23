@@ -194,7 +194,7 @@ class ViewTransaction extends Component {
             {/* <div className={styles.headerCurrency}>{usdValue} USD</div> */}
           </div>
           <div className={styles.tokenInfoContainer}>
-            <div className={styles.tokenHeader}>In Height :</div>
+            <div className={styles.tokenHeader}>Transaction ID :</div>
             <div className={styles.feeContainer}>
               <div className={styles.feeAmount}>
                 {/* <FormattedNumber value={tx.txsize} /> Bandwidth */}
@@ -202,7 +202,7 @@ class ViewTransaction extends Component {
                   id = 'height'
                   onClick={this.copyHeight}
                   className={styles.input}
-                  value= {tx.block_id}
+                  value= {tx.txID ? tx.txID:tx.block_id}
                   readOnly
                 />
               </div>
