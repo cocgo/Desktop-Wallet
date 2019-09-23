@@ -125,7 +125,7 @@ class ViewTransaction extends Component {
   }
 
   copyHeight() {
-    var wallet = document.querySelector("#height");
+    var wallet = document.querySelector("#heighttxid");
     wallet.focus();
     wallet.select();
     document.execCommand("copy");
@@ -198,11 +198,11 @@ class ViewTransaction extends Component {
             <div className={styles.feeContainer}>
               <div className={styles.feeAmount}>
                 {/* <FormattedNumber value={tx.txsize} /> Bandwidth */}
-                <input
-                  id = 'height'
+                <textarea
+                  id = 'heighttxid'
                   onClick={this.copyHeight}
                   className={styles.input}
-                  value= {tx.txID ? tx.txID:tx.block_id}
+                  value= {tx.txID ? tx.txID:'--'}
                   readOnly
                 />
               </div>
