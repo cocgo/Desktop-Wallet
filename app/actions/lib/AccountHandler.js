@@ -34,10 +34,26 @@ export default class AccountHandler {
   static generateAccount(size = 256) {
     console.log(`Generating new account with size ${size}`);
 
-    const mnemonic = bip39.generateMnemonic(size);
-
+    var genmnemonic = ''
+    let genw = ()=>{
+      const mnemonic = bip39.generateMnemonic(size);
+      let arrWords = mnemonic.split(' ');
+      let setWords = new Set();
+      for (let index = 0; index < arrWords.length; index++) {
+        setWords.add(arrWords[index]);
+      }
+      if(setWords.size < arrWords.length){
+        // console.log('---1', arrWords)
+        genw();
+      }else{
+        // console.log('---2 ')
+        genmnemonic = mnemonic;
+      }
+    }
+    genw();
+    // console.log('---3', genmnemonic)
     return new AccountHandler(
-      mnemonic
+      genmnemonic
     );
   }
 
