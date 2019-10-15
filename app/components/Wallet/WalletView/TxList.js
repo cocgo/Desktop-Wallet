@@ -5,6 +5,7 @@ import styles from "./TxList.css";
 import Transaction from "./Transaction";
 import { updateTransferTransactions } from "../../../actions/wallet";
 import { participationToTokens } from "../../../utils/currency";
+import ReactList from "react-list"
 
 const TronHttpClient = require("tron-http-client");
 
@@ -88,10 +89,31 @@ class TxList extends Component {
     filteredTransactions = this.calculateParticipateAssetIssueContractPrices(
       filteredTransactions
     );
+    let renderItem = function(index, key) {
+      let tx = filteredTransactions[index]
+      return <Transaction
+              key={index}
+              tx={tx}
+              txID={tx._id}
+              amount={tx.amount_tokens ? tx.amount_tokens : tx.amount}
+              isToken={tx.asset !== "DT"}
+              date={tx.date}
+              type={tx.type}
+              asset={tx.asset}
+              contract_desc={tx.contract_desc}
+              is_owner={tx.owner_address === accountId}
+            />
+    }
 
     return (
       <div className={styles.txList}>
-        {filteredTransactions.map((tx, i) => (
+        <ReactList
+          itemRenderer={renderItem}
+          length={filteredTransactions.length}
+          type='uniform'
+        />
+
+        {/* {filteredTransactions.map((tx, i) => (
           <Transaction
             key={i}
             tx={tx}
@@ -104,7 +126,7 @@ class TxList extends Component {
             contract_desc={tx.contract_desc}
             is_owner={tx.owner_address === accountId}
           />
-        ))}
+        ))} */}
       </div>
     );
   }
